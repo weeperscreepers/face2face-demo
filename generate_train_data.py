@@ -5,7 +5,8 @@ import time
 import argparse
 import numpy as np
 from imutils import video
-from FaceLandmarkDetector import FaceLandmarkDetector
+from faceLandmarkDetector import FaceLandmarkDetector
+
 
 def writeFrames(frameNumber, original, landmarks):
     # Display the resulting frame
@@ -28,7 +29,7 @@ def main(args):
         frameStart = time.time()
         _,frame = cap.read()
         frame_resize = faceProcessor.resizeFrame(frame);
-        processedFrame,found = faceProcessor.processFrame(frame, frame_resize)
+        processedFrame,found = faceProcessor.processFrame(frame, frame_resize, 1)
         if (count > args.number):
             break;
         if (found):

@@ -6,7 +6,7 @@ import tensorflow as tf
 from imutils import video
 
 
-from FaceLandmarkDetector import FaceLandmarkDetector
+from faceLandmarkDetector import FaceLandmarkDetector
 
 CROP_SIZE = 256
 
